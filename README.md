@@ -8,7 +8,7 @@ Installation
 
 Include in your Gemfile: 
 
-    gem 'missing_i18_keys', :git => 'git@github.com:kalkov/missing_i18n_keys.git'
+    gem 'missing_i18n_keys', :git => 'git@github.com:kalkov/missing_i18n_keys.git'
 
 And execute:
 
