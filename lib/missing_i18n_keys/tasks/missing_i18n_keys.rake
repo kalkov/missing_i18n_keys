@@ -24,13 +24,13 @@ class MissingKeysFinder
   end
 
   def find_missing_keys
-    output_available_locales
-    output_unique_key_stats(all_keys)
-
     if @argv.locale
+      output_unique_key_stats(all_keys)
       missing_keys = search_for_keys_in_locale(@argv.locale)
       output_missing_keys(missing_keys, @argv.locale)
     else
+      output_available_locales
+      output_unique_key_stats(all_keys)
       I18n.available_locales.each do |locale|
         missing_keys = search_for_keys_in_locale(locale)
         output_missing_keys(missing_keys, locale)
